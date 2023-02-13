@@ -8,6 +8,22 @@
 // querySelector, querySelectorAll
 // addEventListener, classList, setAttribute, dataset, ....
 
+// 아래 처럼 작성하지 마세요. 😓
+// function renderVanillaApp() {
+//   rootElement.innerHTML = /* html */`
+//     <div class="container container--md">
+//       <h1>웹브라우저 환경에서 React 라이브러리 시작하기</h1>
+//       <p>React 라이브러리 코드가 웹 브라우저 환경에서 어떻게 해석되고 작동되는 지 살펴봅니다.</p>
+//       <ul>
+//         <li>React 및 ReactDOM API 활용</li>
+//         <li>가상(Virtual) 노드 vs. 실제(Actual) DOM 노드</li>
+//       </ul>
+//     </div>
+//   `;
+// }
+
+/* -------------------------------------------------------------------------- */
+
 const rootElement = document.getElementById("root");
 
 function renderVanillaApp() {
