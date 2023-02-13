@@ -18,14 +18,15 @@ let params = {
   host: 'localhost',
   port: 3000,
   root: DIR.public,
-  file: 'index.html',
-  mount: [['/scripts', DIR.src]],
+  file: 'index.html', // entry point(file)
+  mount: [['/scripts', DIR.src]], //route
   open: false,
   wait: 200,
 };
 
 const customParams = parseArgv(argv);
 
+// 전개구문 (spread sytax) - 객체 합성
 params = { ...params, ...customParams };
 
 /* start server ------------------------------------------------------------- */
