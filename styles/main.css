@@ -3,7 +3,7 @@
 
 /* CSS 스타일 분기(조건 처리) */
 
-.no-js body {
+/* .no-js body {
     background-color: darkred;
     color: white;
 }
@@ -11,4 +11,4 @@
 .js body {
     background-color: white;
     color: darkred;
-}
+} */
