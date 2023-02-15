@@ -19,7 +19,7 @@ let params = {
   port: 3000,
   root: DIR.public,
   file: 'index.html', // entry point(file)
-  mount: [['/scripts', DIR.src]], //route
+  // mount: [['/scripts', DIR.src]], //route
   open: false,
   wait: 200,
 };
