@@ -28,18 +28,39 @@ var App = /*#__PURE__*/function (_React$Component) {
       isToggle: false
     });
     _defineProperty(_assertThisInitialized(_this), "originalHeadline", _this.state.headline);
+    _defineProperty(_assertThisInitialized(_this), "willUpdateHeadline", 'NEW HEADLINE! 😃');
     _defineProperty(_assertThisInitialized(_this), "handleChangeHeadline", function () {
-      _this.setState({
-        headline: "NEW HEADLINE! 😃",
-        isDisabled: true
-      });
+      var assignHeadlineContent = '';
+
+      // this.setState({
+      //   headline: "NEW HEADLINE! 😃",
+      //   isDisabled: true,
+      // });
+
+      // 조건 처리
+      //! 문을 사용할 것인가?
+
+      if (_this.state.isToggle) {
+        _this.setState({
+          isToggle: false,
+          headline: _this.originalHeadline
+        });
+      } else {
+        _this.setState({
+          isToggle: true,
+          headline: _this.willUpdateHeadline
+        });
+      }
+
+      //! 아니면 식을 사용할 것인가?
     });
     return _this;
   }
   _createClass(App, [{
     key: "render",
     value: function render() {
-      console.log(this);
+      // console.log(this);
+
       return /*#__PURE__*/React.createElement("div", {
         "data-component": "App"
       }, /*#__PURE__*/React.createElement("h1", null, this.state.headline), /*#__PURE__*/React.createElement("button", {

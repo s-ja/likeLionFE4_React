@@ -12,16 +12,38 @@ class App extends React.Component {
   // 그럼 함수는? 못한다. React Hooks (useRef)
   // 메모이제이션 패턴
   originalHeadline = this.state.headline;
+  willUpdateHeadline = 'NEW HEADLINE! 😃';
 
   handleChangeHeadline = () => {
-    this.setState({
-      headline: "NEW HEADLINE! 😃",
-      isDisabled: true,
-    });
+
+    let assignHeadlineContent = '';
+    
+    // this.setState({
+    //   headline: "NEW HEADLINE! 😃",
+    //   isDisabled: true,
+    // });
+
+    // 조건 처리
+    //! 문을 사용할 것인가?
+
+    if (this.state.isToggle){
+      this.setState({
+        isToggle:false,
+        headline:this.originalHeadline
+      });
+    }else{
+      this.setState({
+        isToggle:true,
+        headline: this.willUpdateHeadline
+      });
+    }
+
+    //! 아니면 식을 사용할 것인가?
+
   };
 
   render() {
-    console.log(this);
+    // console.log(this);
 
     return (
       <div data-component="App">
