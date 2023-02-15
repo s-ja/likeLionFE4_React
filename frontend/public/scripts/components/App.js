@@ -59,15 +59,21 @@ var App = /*#__PURE__*/function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      // console.log(this);
-
+      var _this$state = this.state,
+        isToggle = _this$state.isToggle,
+        headline = _this$state.headline;
+      if (this.state.isLoading) {
+        return /*#__PURE__*/React.createElement("div", {
+          role: "alert"
+        }, "\uB370\uC774\uD130 \uB85C\uB529 \uC911...");
+      }
       return /*#__PURE__*/React.createElement("div", {
         "data-component": "App"
-      }, /*#__PURE__*/React.createElement("h1", null, this.state.headline), /*#__PURE__*/React.createElement("button", {
-        disabled: this.state.isDisabled,
+      }, /*#__PURE__*/React.createElement("h1", null, headline), /*#__PURE__*/React.createElement("button", {
+        // disabled={this.state.isDisabled}
         type: "button",
         onClick: this.handleChangeHeadline
-      }, "\uD5E4\uB4DC\uB77C\uC778 \uC5C5\uB370\uC774\uD2B8"));
+      }, isToggle ? '오리지널 헤드라인으로 변경' : '뉴 헤드라인으로 변경'));
     }
   }]);
   return App;
