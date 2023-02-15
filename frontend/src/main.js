@@ -67,9 +67,7 @@ const { createRoot } = ReactDOM;
 const reactDomRoot = ReactDOM.createRoot(document.getElementById("root"));
 
 reactDomRoot.render(
-  //   <React.StrictMode>
   <StrictMode>
     <App />
-    {/* </.StrictMode> */}
   </StrictMode>
 );

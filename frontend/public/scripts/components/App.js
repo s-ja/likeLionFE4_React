@@ -14,12 +14,17 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 var App = /*#__PURE__*/function (_React$Component) {
   _inherits(App, _React$Component);
   var _super = _createSuper(App);
+  // 2022 6. 표준 기술
+  // public, private 클래스 필드, 피처
+
   function App(props) {
     var _this;
     _classCallCheck(this, App);
     _this = _super.call(this, props);
     _this.state = {
-      headline: "React Application"
+      headline: "React Application",
+      // isDisabled: false,
+      isToggle: false
     };
     _this.handleChangeHeadline = _this.handleChangeHeadline.bind(_assertThisInitialized(_this));
     return _this;
@@ -28,7 +33,8 @@ var App = /*#__PURE__*/function (_React$Component) {
     key: "handleChangeHeadline",
     value: function handleChangeHeadline() {
       this.setState({
-        headline: "NEW HEADLINE! 😃"
+        headline: "NEW HEADLINE! 😃",
+        isDisabled: true
       });
     }
   }, {
@@ -38,7 +44,9 @@ var App = /*#__PURE__*/function (_React$Component) {
         "data-component": "App"
       }, /*#__PURE__*/React.createElement("h1", null, this.state.headline), /*#__PURE__*/React.createElement("button", {
         type: "button",
-        onClick: this.handleChangeHeadline
+        onClick: this.handleChangeHeadline,
+        disabled: this.state.isDisabled
+        // disabled={isDisabled}
       }, "\uD5E4\uB4DC\uB77C\uC778 \uC5C5\uB370\uC774\uD2B8"));
     }
   }]);
