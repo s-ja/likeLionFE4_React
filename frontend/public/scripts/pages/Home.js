@@ -27,19 +27,19 @@ var Home = /*#__PURE__*/function (_React$Component) {
     _defineProperty(_assertThisInitialized(_this), "state", {
       members: (_this$props$likeLionM = _this.props.likeLionMembers) !== null && _this$props$likeLionM !== void 0 ? _this$props$likeLionM : [{
         id: 1,
-        name: 'a'
+        name: "a"
       }, {
         id: 2,
-        name: 'b'
+        name: "b"
       }, {
         id: 3,
-        name: 'c'
+        name: "c"
       }]
     });
     _defineProperty(_assertThisInitialized(_this), "handleFilterLab", function () {
       _this.setState({
         members: _this.state.members.filter(function (member) {
-          return member.name.includes('c');
+          return member.name.includes("c") || member.name.includes("a");
         })
       });
     });
@@ -54,13 +54,13 @@ var Home = /*#__PURE__*/function (_React$Component) {
           marginBottom: 10
         },
         onClick: this.handleFilterLab
-      }, "A, C \uB108\uB124\uB4E4 \uC880 \uB530\uB77C\uC640!"), /*#__PURE__*/React.createElement("ul", null, this.state.members.map(function (_ref) {
+      }), /*#__PURE__*/React.createElement("ul", null, this.state.members.map(function (_ref) {
         var id = _ref.id,
           name = _ref.name,
           gender = _ref.gender;
         return /*#__PURE__*/React.createElement("li", {
           key: id
-        }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("span", null, gender.includes('여성') ? '🙆🏻‍♀️' : '🙆🏻‍♂️'), " ", name));
+        }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("span", null, gender.includes("여성") ? "🙆🏻‍♀️" : "🙆🏻‍♂️"), " ", name));
       })));
     }
   }]);
