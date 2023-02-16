@@ -17,6 +17,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
   _inherits(Home, _React$Component);
   var _super = _createSuper(Home);
   function Home() {
+    var _this$props$likeLionM;
     var _this;
     _classCallCheck(this, Home);
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -24,10 +25,23 @@ var Home = /*#__PURE__*/function (_React$Component) {
     }
     _this = _super.call.apply(_super, [this].concat(args));
     _defineProperty(_assertThisInitialized(_this), "state", {
-      members: likeLionMembers
+      members: (_this$props$likeLionM = _this.props.likeLionMembers) !== null && _this$props$likeLionM !== void 0 ? _this$props$likeLionM : [{
+        id: 1,
+        name: 'a'
+      }, {
+        id: 2,
+        name: 'b'
+      }, {
+        id: 3,
+        name: 'c'
+      }]
     });
     _defineProperty(_assertThisInitialized(_this), "handleFilterLab", function () {
-      console.log('filtering');
+      _this.setState({
+        members: _this.state.members.filter(function (member) {
+          return member.name.includes('c');
+        })
+      });
     });
     return _this;
   }
@@ -40,7 +54,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
           marginBottom: 10
         },
         onClick: this.handleFilterLab
-      }, "10\uC870 \uBAA8\uC5EC!"), /*#__PURE__*/React.createElement("ul", null, this.state.members.map(function (_ref) {
+      }, "A, C \uB108\uB124\uB4E4 \uC880 \uB530\uB77C\uC640!"), /*#__PURE__*/React.createElement("ul", null, this.state.members.map(function (_ref) {
         var id = _ref.id,
           name = _ref.name,
           gender = _ref.gender;
