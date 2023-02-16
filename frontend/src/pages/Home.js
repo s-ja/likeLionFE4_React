@@ -2,18 +2,18 @@ class Home extends React.Component {
   state = {
     products: [
       {
-        id: 'product-dkfj',
-        name: '웰치스',
+        id: "product-dkfj",
+        name: "웰치스",
         price: 980,
         image:
-          'https://img.danawa.com/prod_img/500000/648/889/img/16889648_1.jpg?shrink=500:500&_v=20221021170923',
+          "https://img.danawa.com/prod_img/500000/648/889/img/16889648_1.jpg?shrink=500:500&_v=20221021170923",
       },
       {
-        id: 'product-ekdi',
-        name: '두부 1kg',
+        id: "product-ekdi",
+        name: "두부 1kg",
         price: 2180,
         image:
-          'https://contents.lotteon.com/itemimage/_v105312/LF/14/37/17/3_/0/LF1437173_0_2.jpg/dims/resizef/720X720',
+          "https://contents.lotteon.com/itemimage/_v105312/LF/14/37/17/3_/0/LF1437173_0_2.jpg/dims/resizef/720X720",
       },
     ],
   };
@@ -30,7 +30,7 @@ class Home extends React.Component {
         <ul>
           <li>
             <figure data-id={products[0].id}>
-              <img src={products[0].image} height={100} alt />
+              <img src={products[0].image} height={100} alt="" />
               <figcaption>
                 <span>{products[0].name}</span>
                 <span>{products[0].price}</span>
@@ -39,7 +39,7 @@ class Home extends React.Component {
           </li>
           <li>
             <figure data-id={products[1].id}>
-              <img src={products[1].image} height={100} alt />
+              <img src={products[1].image} height={100} alt="" />
               <figcaption>
                 <span>{products[1].name}</span>
                 <span>{products[1].price}</span>
