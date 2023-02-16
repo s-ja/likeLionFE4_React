@@ -23,14 +23,15 @@ var App = /*#__PURE__*/function (_React$Component) {
     }
     _this = _super.call.apply(_super, [this].concat(args));
     _defineProperty(_assertThisInitialized(_this), "state", {
-      headline: "React Application",
+      // 사용자가 선언해서 쓰세요.
+      headline: 'React Application',
       // isDisabled: false,
       isToggle: false,
       isLoading: !true,
       hasError: null // { message: '서버에서 적절하지 않은 요청이 있었다는 응답이 있었습니다.' },
     });
     _defineProperty(_assertThisInitialized(_this), "originalHeadline", _this.state.headline);
-    _defineProperty(_assertThisInitialized(_this), "willUpdateHeadline", "NEW HEADLINE! 😃");
+    _defineProperty(_assertThisInitialized(_this), "willUpdateHeadline", 'NEW HEADLINE! 😃');
     _defineProperty(_assertThisInitialized(_this), "handleChangeHeadline", function () {
       // 조건 처리
       // 문을 사용할 것인가?
@@ -71,20 +72,13 @@ var App = /*#__PURE__*/function (_React$Component) {
           role: "alert"
         }, this.state.hasError.message);
       }
-
-      // `style` prop object!!!!!!!!
-      var hiddenStyle = {
-        display: "none"
-      };
       return /*#__PURE__*/React.createElement("div", {
         "data-component": "App"
-      }, /*#__PURE__*/React.createElement("h1", {
-        style: "display: none;"
-      }, headline), /*#__PURE__*/React.createElement("button", {
+      }, /*#__PURE__*/React.createElement("h1", null, headline), /*#__PURE__*/React.createElement("button", {
         // disabled={this.state.isDisabled}
         type: "button",
         onClick: this.handleChangeHeadline
-      }, isToggle ? "오리지널 헤드라인으로 변경" : "뉴 헤드라인으로 변경"));
+      }, isToggle ? '오리지널 헤드라인으로 변경' : '뉴 헤드라인으로 변경'));
     }
   }]);
   return App;
